@@ -6,7 +6,6 @@ html {
 *:before,
 *:after {
     margin: 0;
-    padding: 0;
     box-sizing: inherit;
 }
 
@@ -35,15 +34,32 @@ header {
     background-image: url("/img/Skjermbilde 2025-03-17 130628.png"); 
     background-size: cover;
     padding: 20px;
-    text-align: right;
     color: #ffffff;
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header-topp {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header-login {
+ filter: invert();
+}
+
+.header-logo {
+    filter: brightness(500%);
+}
+
+.header-bunn {
+    text-align: right;
 }
 
 main {
     display: flex;
-    justify-content: right;
-    word-break: break-all;
     flex-direction: column;
     padding: 20px;
 }
@@ -51,6 +67,7 @@ main {
 .info_1, .info_2 {
     padding: 20px;
     background-color: rgb(212, 212, 212);
+    word-break: break-all;
 }
 
 .info_1 {
@@ -59,12 +76,11 @@ main {
 
 .login_1 {
     display: flex;
+    flex-direction: column;
     padding: 20px;
-    background-color: rgb(255, 255, 255);
-    justify-content: center;
+    background-color: rgb(222, 222, 222);
     align-items: center;
 }
-
 
 footer {
     display: flex;

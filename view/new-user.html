@@ -8,7 +8,14 @@
         <link rel="icon" href="/img/favicon.svg" type="image/svg+xml" />
     </head>
     <body>
-        <h1>Registrer ny bruker</h1>
+        <header>
+            <div class="header-topp">
+              <div class="header-logo"><img height="50px" src="/img/Logo.svg" alt="logo"></div>
+            </div>
+            <div class="header-bunn"><h1>Registrer ny bruker</h1></div>
+          
+          
+          </header>
         <!-- Skjema for å opprette en ny bruker -->
         <form action="/api/bruker" method="POST">
             <label for="Brukernavn">Brukernavn:</label>
@@ -19,6 +26,5 @@
             <br />
             <button type="submit">Registrer</button>
         </form>
-        <p>Har du allerede en konto? <a href="/login">Logg inn her</a></p>
     </body>
 </html>

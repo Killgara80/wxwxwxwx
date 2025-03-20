@@ -14,8 +14,12 @@ app.get("/login", (req, res) => {
 });
 
 // Rute for å serve registreringssiden (opprett bruker)
-app.get("/opprett-bruker", (req, res) => {
+app.get("/nyBruker", isAuthenticated, (req, res) => {
     res.sendFile(path.join(__dirname, "view", "new-user.html"));
+});
+
+app.get("/red", isAuthenticated, (req, res) => {
+    res.sendFile(path.join(__dirname, "view", "index.html"));
 });
 
 // Rute for å serve kommentar-siden
@@ -60,7 +64,7 @@ app.post("/login", (req, res) => {
         }
         if (row && (await bcrypt.compare(Passord, row.Passord))) {
             req.session.user = row; // Lagre brukerdata i session
-            res.redirect("/kommentar");
+            res.redirect("/red");
         } else {
             res.redirect("/login?error=ugyldig");
         }
