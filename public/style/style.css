@@ -24,3 +24,51 @@ html {
 .commentContent {
     /* Child av comment */
 }
+
+body{
+    display: grid;
+    grid-template-rows: 200px auto 50px;
+    min-height: 100vh;
+}
+
+header {
+    background-image: url("/img/Skjermbilde 2025-03-17 130628.png"); 
+    background-size: cover;
+    padding: 20px;
+    text-align: right;
+    color: #ffffff;
+    
+}
+
+main {
+    display: flex;
+    justify-content: right;
+    word-break: break-all;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.info_1, .info_2 {
+    padding: 20px;
+    background-color: rgb(212, 212, 212);
+}
+
+.info_1 {
+    margin-bottom: 20px;
+}
+
+.login_1 {
+    display: flex;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    justify-content: center;
+    align-items: center;
+}
+
+
+footer {
+    display: flex;
+    align-items: center;
+   justify-content: center;
+
+}

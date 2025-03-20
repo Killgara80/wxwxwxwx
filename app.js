@@ -4,8 +4,8 @@ const { app, server, port, db, isAuthenticated, bcrypt } = require("./server");
 const path = require("path");
 
 // Rot-rute: Sender brukeren til riktig side basert på om de er logget inn
-app.get("/", isAuthenticated, (req, res) => {
-    res.sendFile(path.join(__dirname, "view", "chat.html"));
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "view", "public.html"));
 });
 
 // Rute for å serve login-siden
@@ -20,7 +20,7 @@ app.get("/opprett-bruker", (req, res) => {
 
 // Rute for å serve kommentar-siden
 app.get("/kommentar", (req, res) => {
-    res.sendFile(path.join(__dirname, "view", "chat.html"));
+    res.sendFile(path.join(__dirname, "view", "public.html"));
 });
 
 // Rute for å logge ut og ødelegge session

@@ -9,3 +9,15 @@
     </head>
     <body></body>
 </html>
+<h2>Alle kommentarer</h2>
+  <div class ="commentList" id="commentList"></div>
+
+  <h1>Legg til en kommentar</h1>
+  <!-- Skjema for å legge til ny kommentar -->
+  <form onsubmit="submitComment(event)">
+    <textarea id="Kommentar" required placeholder="Skriv din kommentar her..."></textarea>
+    <br>
+    <button type="submit">Legg til kommentar</button>
+  </form>
+  
+  <p><a href="/logout">Logg ut</a></p>
