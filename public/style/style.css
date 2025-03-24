@@ -54,6 +54,11 @@ header {
     filter: brightness(500%);
 }
 
+.header-logo:hover {
+    filter: brightness(100%);
+    color: #000;
+}
+
 .header-bunn {
     text-align: right;
 }
